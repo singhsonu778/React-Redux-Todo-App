@@ -15,6 +15,7 @@
   "license": "ISC",
   "homepage": "https://github.com/singhsonu778/React-Redux-Todo-App",
   "devDependencies": {
+    "babel-preset-stage-0": "^6.24.1",
     "css-loader": "^0.28.1",
     "node-sass": "^4.5.2",
     "sass-loader": "^6.0.3",

@@ -1,4 +1,4 @@
-import todo from ./todo.js;
+import todo from './todo.js';
 
 const todos = (state = [], action) => {
    switch (action.type) {
@@ -13,3 +13,5 @@ const todos = (state = [], action) => {
          return state;
    }
 };
+
+export default todos;

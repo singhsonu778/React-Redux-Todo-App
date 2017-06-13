@@ -1,8 +1,7 @@
 const todo = (state, action) => {
    switch (action.type) {
       case 'ADD_TODO':
-         return 
-         {
+         return {
             id: action.id,
             text: action.text,
             completed: false
@@ -11,8 +10,7 @@ const todo = (state, action) => {
          if (state.id !== action.id) {
             return state;
          } else {
-            return 
-            {
+            return {
                ...state,
                completed: !state.completed
             };
@@ -21,4 +19,5 @@ const todo = (state, action) => {
          return state;
    }
 }
+
 export default todo;
