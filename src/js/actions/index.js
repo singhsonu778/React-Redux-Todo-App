@@ -4,21 +4,21 @@ const addTodo = (text) => {
       type: 'ADD_TODO',
       id: nextTodoId++,
       text
-   }
-}
+   };
+};
 
 const setVisibilityFilter = (filter) => {
    return {
       type: 'SET_VISIBILITY_FILTER',
       filter
-   }
-}
+   };
+};
 
 const toggleTodo = (id) => {
    return {
       type: 'TOGGLE_TODO',
       id
-   }
-}
+   };
+};
 
-export default { addTodo, setVisibilityFilter, toggleTodo };
+export { addTodo, setVisibilityFilter, toggleTodo };
