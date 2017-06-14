@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 
-class TodoApp extends Component {
+class Footer extends Component {
    render() {
       return (
          <div>
-         	<h1>React Redux ToDo App</h1>
+         	<h1>Footer</h1>
          </div>
       );
    }
 }
 
-export default TodoApp;
+export default Footer;

@@ -1,4 +1,4 @@
-import todo from './todo.js';
+import todo from './todo';
 
 const todos = (state = [], action) => {
    switch (action.type) {

@@ -4,13 +4,13 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import '../scss/index.scss';
 import reducers from './reducers';
-import TodoApp from './components/TodoApp.js';
+import App from './components/App';
 
 const store = createStore(reducers);
 
 ReactDOM.render(
 	<Provider store={store}>
-		<TodoApp/>
+		<App/>
 	</Provider>,
 	document.getElementById('root')
 );
