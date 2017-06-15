@@ -1,6 +1,7 @@
 import todo from './todo';
 
 const todos = (state = [], action) => {
+   console.log('todos reducer...state ' + JSON.stringify(state) + ' action ' + JSON.stringify(action));
    switch (action.type) {
       case 'ADD_TODO':
          return [

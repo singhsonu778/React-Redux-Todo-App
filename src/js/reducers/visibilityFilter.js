@@ -1,5 +1,6 @@
 const visibilityFilter = (state = 'SHOW_ALL', action) => {
-   switch (action.type) {
+    console.log('visibilityFilter reducer...state ' + JSON.stringify(state) + ' action ' + JSON.stringify(action));
+    switch (action.type) {
       case 'SET_VISIBILITY_FILTER':
          return action.filter;
       default:

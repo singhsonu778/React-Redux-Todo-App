@@ -7,7 +7,11 @@ class TodoList extends Component {
 		  <ul>
 		    {
 				this.props.todos.map(todo =>
-					<Todo key={todo.id} text={todo.text} completed={todo.completed} onClick={() => this.props.onTodoClick(todo.id)}/>
+					<Todo key={todo.id} text={todo.text} completed={todo.completed} onClickHandler={() => {
+							console.log('...todolist....onclick method....');
+							this.props.onClickHandler(todo.id);
+						}
+					}/>
 				)
 		    }
 		  </ul>

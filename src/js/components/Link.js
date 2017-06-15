@@ -3,8 +3,9 @@ import React, { Component } from 'react';
 class Link extends Component {
 
    handleClick(event) {
+       console.log('Link...handleclick method...');
        event.preventDefault();
-       this.props.onClick();
+       this.props.onClickHandler();
    }
 
    render() {

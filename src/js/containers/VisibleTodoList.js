@@ -14,14 +14,17 @@ const getVisibleTodos = (todos, filter) => {
 };
 
 const mapStateToProps = (state) => {
+   console.log('VisibleTodoList...mapStateToProps method...' + JSON.stringify(state));
    return {
       todos: getVisibleTodos(state.todos, state.visibilityFilter)
    };
 };
 
 const mapDispatchToProps = (dispatch) => {
+   console.log('VisibleTodoList...mapDispatchToProps method...' + JSON.stringify(dispatch));
    return {
-      onTodoClick: (id) => {
+	  onClickHandler: (id) => {
+		 console.log('VisibleTodoList...mapDispatchToProps method...onClickHandler...');
          dispatch(toggleTodo(id))
       }
    };

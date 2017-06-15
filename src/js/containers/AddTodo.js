@@ -3,10 +3,12 @@ import { connect } from 'react-redux';
 import { addTodo } from '../actions';
 
 let AddTodo = ({ dispatch }) => {
+   console.log('AddTodo...');
    let input;
    return (
        <div>
           <form onSubmit = { event => {
+              console.log('AddTodo...form submit...');
 			  event.preventDefault();
 			  if (!input.value.trim()) {
 			     return;

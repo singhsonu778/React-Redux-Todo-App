@@ -7,6 +7,7 @@ import reducers from './reducers';
 import App from './components/App';
 
 const store = createStore(reducers);
+console.log('store...' + JSON.stringify(store.getState()));
 
 ReactDOM.render(
 	<Provider store={store}>
