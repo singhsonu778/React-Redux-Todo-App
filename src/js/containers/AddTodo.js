@@ -1,30 +1,30 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { addTodo } from '../actions';
 
-let AddTodo = ({ dispatch }) => {
-   console.log('AddTodo...');
-   let input;
-   return (
-       <div>
-          <form onSubmit = { event => {
-              console.log('AddTodo...form submit...');
-			  event.preventDefault();
-			  if (!input.value.trim()) {
-			     return;
-			  }
-			  dispatch(addTodo(input.value));
-			  input.value = '';
-          }}>
-	          <input ref = {node => {
-	        	  input = node;
-	          }}/>
-	          <button type = 'submit'>Add Todo</button>
-          </form>
-       </div>
-   );
-};
+class AddTodo extends Component {
 
-AddTodo = connect()(AddTodo);
+   handleFormSubmit(event) {
+	  console.log('AddTodo...form submit...');
+	  event.preventDefault();
+	  let input  = this.refs.todo;
+	  if (!input.value.trim()) {
+	     return;
+	  }
+	  this.props.dispatch(addTodo(input.value));
+	  input.value = '';
+   }
 
-export default AddTodo;
+   render() {
+      return (
+	       <div>
+	          <form onSubmit = {this.handleFormSubmit.bind(this)}>
+	          	  <input type = 'text' ref = 'todo'/>
+		          <button type = 'submit'>Add Todo</button>
+	          </form>
+	       </div>
+      );
+   }
+}
+
+export default connect()(AddTodo);
