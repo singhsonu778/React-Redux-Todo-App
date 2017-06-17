@@ -6,7 +6,16 @@ import '../scss/index.scss';
 import reducers from './reducers';
 import App from './components/App';
 
-const store = createStore(reducers);
+let initialState = {
+	"todos":[
+		{	"id": 0,
+			"text": "initial todo",
+			"completed": false
+		}
+	]
+};
+
+const store = createStore(reducers, initialState);
 console.log('store...' + JSON.stringify(store.getState()));
 
 ReactDOM.render(
